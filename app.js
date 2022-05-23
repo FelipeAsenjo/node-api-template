@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api/v1', indexRouter)
 
 app.use(logErrors)
-app.use(errorHandler)
 app.use(boomErrorHandler)
+app.use(errorHandler)
 
 module.exports = app
