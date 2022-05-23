@@ -4,7 +4,7 @@ const helmet = require('helmet')
 const cors = require('cors')
 const indexRouter = require('./routes')
 
-const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler')
+const { logErrors, ormErrorHandler, boomErrorHandler, errorHandler } = require('./middlewares/error.handler')
 
 const app = express()
 
