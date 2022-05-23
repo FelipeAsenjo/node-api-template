@@ -1,20 +1,20 @@
 const { Sequelize } = require('sequelize')
 
 const {
-	database,
-	user,
-	password,
-	host,
+	dbName,
+	dbUser,
+	dbPassword,
+	dbHost,
 	dialect
-} = require('../config').DB
+} = require('../config/config').db
 
-const db = new Sequelize(database, user, password, {
-	host,
+const db = new Sequelize(dbName, dbUser, dbPassword, {
+	dbHost,
 	dialect
 })
 
 
-async dbConnection() {
+const dbConnection = async () => {
 
 	try {
 
